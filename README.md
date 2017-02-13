@@ -1,2 +1,2 @@
 # stonehearth-documentation-u
-unofficial stonehearth documentation
+unofficial stonehearth documentation and tools

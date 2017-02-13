@@ -4,7 +4,6 @@ import io
 from pathlib import PurePath
 
 encoding = "utf-8"
-root = './stonehearth/'
 
 reg_events = re.compile(r"radiant\.events\.trigger.*\([\w\W]*?\)")
 reg_args = re.compile(r"\w+(?= =)")
@@ -14,7 +13,6 @@ def extract_events_from_text(string):
     
     events = set(re.findall(reg_events, string))
     for event in events:
-        print("event: " + event)
         items = event.split(',')
         async = "✔" if "trigger_async" in event else "✖"
 
@@ -37,13 +35,13 @@ def extract_events_from_text(string):
         items[1] = items[1][2:len(items[1])-1]
         # construct output string
         outputStr = "{0} | {1} | {2} | {3}".format(items[1], arguments, "Empty", async)
-        print(outputStr)
         formattedEvents.append(outputStr)
 
     return formattedEvents
 
-def get_all_events(path, output):
-     with io.open(output, "w", encoding = encoding) as outputfile:
+def get_all_events(root, output):
+    output = root[2:len(root)-1] + "_" + output
+    with io.open(output, "w", encoding = encoding) as outputfile:
         for path, subdirs, files in os.walk(root):
             for name in files:
                 file = PurePath(path, name)
@@ -67,5 +65,5 @@ def get_all_events(path, output):
 #print(extract_events_from_text(f.read()) == set())
 
 
-get_all_events("./stonehearth/", "events.markdown")
+get_all_events("./radiant/", "events.markdown")
         

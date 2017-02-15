@@ -1,481 +1,166 @@
-# Events
-## Stonhearth
+## ./stonehearth/ - events
+*I can't promise that these are all events.*
 
-##### stonehearth\ai\actions\admire_fire_adjacent_action.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-stonehearth:admiring_fire | {} | Empty | ✔
-##### stonehearth\ai\actions\claim_animal_for_pasture.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-stonehearth:tame_animal |  animal | Empty | ✔
-##### stonehearth\ai\actions\eat_item_action.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-stonehearth:eat_food | consumer, time | Empty | ✔
-stonehearth:journal_event | entity, description | Empty | ✔
-##### stonehearth\ai\actions\feed_pasture_adjacent_action.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-stonehearth:feed_pasture |  pasture | Empty | ✔
-##### stonehearth\ai\actions\harvest_crop_adjacent.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-stonehearth:harvest_crop |  crop_uri | Empty | ✖
-##### stonehearth\ai\actions\harvest_renewable_resource_adjacent.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-stonehearth:journal_event | entity, description, substitutions | Empty | ✔
-stonehearth:gather_renewable_resource | harvested_target, spawned_item | Empty | ✔
-##### stonehearth\ai\actions\harvest_resource_node_adjacent.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-stonehearth:journal_event | entity, description | Empty | ✔
-##### stonehearth\ai\actions\leave_animal_in_pasture_action.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-stonehearth:leave_animal_in_pasture |  animal | Empty | ✔
-##### stonehearth\ai\actions\log_patrol_time_action.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-stonehearth:town_protection_completed | id, duration | Empty | ✔
-##### stonehearth\ai\actions\place_carrying_on_structure_adjacent_action.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-stonehearth:item_placed_on_structure |  ghost_id, placed_item, structure | Empty | ✖
-##### stonehearth\ai\actions\produce_crafted_items.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-stonehearth:crafter:craft_item |  crafting_data | Empty | ✔
-##### stonehearth\ai\actions\repair_entity_adjacent_action.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-stonehearth:repaired_entity |  {} | Empty | ✔
-stonehearth:repaired_entity |  action = 'refill_ammo' | Empty | ✔
-stonehearth:repaired_entity |  entity | Empty | ✔
-##### stonehearth\ai\actions\combat\execute_heal_action.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-stonehearth:healer:healed_entity_in_combat | entity | Empty | ✔
-##### stonehearth\ai\actions\combat\trigger_hit_stun_action.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-stonehearth:combat:hit_stun |  stun_always | Empty | ✔
-##### stonehearth\ai\actions\conversation\trigger_conversation_action.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-stonehearth:start_conversation | entity, conversation_effects | Empty | ✔
-stonehearth:start_conversation | entity, conversation_effects, leader | Empty | ✔
-##### stonehearth\ai\actions\health\heal_entity_adjacent_action.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-stonehearth:entity:healed | healer | Empty | ✔
-stonehearth:repaired_entity |  entity | Empty | ✔
-##### stonehearth\ai\actions\mining\dig_adjacent_action.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-stonehearth:mined_location |  location | Empty | ✖
-##### stonehearth\ai\actions\rescue\drop_carried_citizen_action.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-stonehearth:incapacitation:dropping | None | Empty | ✖
-##### stonehearth\ai\actions\sleeping\sleep_in_bed_adjacent_action.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-stonehearth:sleep_in_bed | bed, is_owner | Empty | ✔
-stonehearth:finished_sleeping | bed, is_owner | Empty | ✔
-##### stonehearth\ai\actions\sleeping\sleep_on_ground_action.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-stonehearth:sleep_on_ground | None | Empty | ✔
-stonehearth:finished_sleeping | None | Empty | ✔
-##### stonehearth\ai\actions\trapping\check_bait_trap_adjacent_action.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-stonehearth:clear_trap |  trapped_entity_id | Empty | ✔
-stonehearth:befriend_pet | pet_id | Empty | ✔
-##### stonehearth\ai\actions\unit_control\unit_wait_at_location_action.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-stonehearth:town_protection_completed | id, duration | Empty | ✔
-##### stonehearth\ai\observers\animal_calorie_observer.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-stonehearth:malnourished_animal_event | None | Empty | ✔
-##### stonehearth\ai\observers\calorie_observer.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-stonehearth:malnourishment_event | None | Empty | ✔
-##### stonehearth\ai\observers\ogos_mountain_observer.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-stonehearth:goblin_campaign:mountain_listens |  nil | Empty | ✔
-##### stonehearth\call_handlers\place_item_call_handler.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-stonehearth:item_undeployed | None | Empty | ✔
-##### stonehearth\components\ai\ai_component.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-stonehearth:ai:halt | None | Empty | ✖
-##### stonehearth\components\attributes\attributes_component.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-stonehearth:attribute_changed: + name | name, entity | Empty | ✔
-##### stonehearth\components\buffs\buffs_component.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-stonehearth:buff_added | entity, uri, buff | Empty | ✔
-stonehearth:buff_removed | entity, uri, buff | Empty | ✔
-##### stonehearth\components\building\building_component.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-stonehearth:construction:active_changed | None | Empty | ✖
-stonehearth:construction:dependencies_finished_changed | None | Empty | ✖
-stonehearth:construction:structure_finished_changed |  entry.entity | Empty | ✖
-##### stonehearth\components\carry_block\carry_block_component.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-stonehearth:carry_block:carrying_changed | None | Empty | ✔
-##### stonehearth\components\combat_state\combat_state_component.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-stonehearth:combat:assaulting_changed | None | Empty | ✔
-stonehearth:combat:primary_target_changed | None | Empty | ✔
-stonehearth:combat:in_combat_changed |  in_combat | Empty | ✖
-stonehearth:combat:stance_changed | None | Empty | ✔
-stonehearth:combat_state:leash_changed | None | Empty | ✔
-stonehearth:combat:panic_changed | None | Empty | ✔
-##### stonehearth\components\construction_progress\construction_progress_component.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-stonehearth:construction:finished_changed | entity | Empty | ✔
-stonehearth:construction:teardown_changed | entity | Empty | ✔
-##### stonehearth\components\defense_zone\defense_zone_component.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-stonehearth:combat:leash_contents_changed |  args | Empty | ✔
-##### stonehearth\components\door\door_component.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-stonehearth:door:lock_changed | None | Empty | ✖
-##### stonehearth\components\entity_forms\entity_forms_component.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-stonehearth:on_removed_from_world | None | Empty | ✖
-stonehearth:on_added_to_world | None | Empty | ✖
-##### stonehearth\components\equipment\equipment_component.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-stonehearth:equipment_changed | None | Empty | ✔
-##### stonehearth\components\equipment_piece\equipment_piece_component.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-stonehearth:equipment_piece:equip_changed | None | Empty | ✖
-##### stonehearth\components\evolve\evolve_component.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-stonehearth:on_evolved | entity, evolved_form | Empty | ✖
-##### stonehearth\components\expendable_resources\expendable_resources_component.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-stonehearth:expendable_resource_changed: + resource_name | resource_name, entity | Empty | ✔
-##### stonehearth\components\fabricator\fabricator_component.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-stonehearth:construction:waiting_for_anti_dependencies |  entity | Empty | ✖
-stonehearth:construction:scaffolding_project_complete | None | Empty | ✖
-##### stonehearth\components\firepit\firepit_component.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-stonehearth:fire:lit | lit, player_id | Empty | ✔
-stonehearth:fire:lit | lit, entity, player_id | Empty | ✔
-##### stonehearth\components\growing\growing_component.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-stonehearth:growing | entity, stage, finished | Empty | ✔
-##### stonehearth\components\happiness\happiness_component.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-stonehearth:mood_changed | None | Empty | ✔
-stonehearth:happiness:thought_added |  thought | Empty | ✔
-##### stonehearth\components\incapacitation\incapacitation_component.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-stonehearth:incapacitation:was_picked_up | None | Empty | ✖
-stonehearth:incapacitation:was_dropped | None | Empty | ✖
-stonehearth:entity:became_incapacitated | None | Empty | ✔
-stonehearth:entity:incapacitate_state_changed | None | Empty | ✔
-##### stonehearth\components\job\job_component.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-stonehearth:journal_event | entity, description | Empty | ✔
-stonehearth:job_changed |  entity | Empty | ✖
-stonehearth:level_up | level, job_uri, job_name | Empty | ✔
-##### stonehearth\components\lease\lease_component.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-stonehearth:lease_released |  lease_name | Empty | ✔
-##### stonehearth\components\mining_zone\mining_zone_component.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-stonehearth:mining:enable_changed | None | Empty | ✔
-##### stonehearth\components\mount\mount_component.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-stonehearth:mount:owner_changed | None | Empty | ✔
-##### stonehearth\components\ownership\ownable_object_component.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-stonehearth:owner_changed |  new_owner | Empty | ✔
-##### stonehearth\components\party\party_component.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-stonehearth:party:size_changed |  size | Empty | ✔
-##### stonehearth\components\party_member\party_member_component.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-stonehearth:party:party_changed | None | Empty | ✔
-##### stonehearth\components\posture\posture_component.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-stonehearth:posture_changed | None | Empty | ✔
-##### stonehearth\components\projectile\projectile_component.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-stonehearth:combat:projectile_impact | None | Empty | ✔
-##### stonehearth\components\renewable_resource_node\renewable_resource_node_component.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-stonehearth:on_renewable_resource_renewed | target, available_resource | Empty | ✖
-stonehearth:renewable_resource_spawned | target, item | Empty | ✖
-stonehearth:on_renewable_resource_renewed | target, available_resource | Empty | ✖
-##### stonehearth\components\resource_node\resource_node_component.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-stonehearth:gather_resource | harvested_target, spawned_item | Empty | ✖
-##### stonehearth\components\scaffolding\scaffolding_project.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-stonehearth:construction:scaffolding_project_complete | None | Empty | ✖
-##### stonehearth\components\scaffolding\scaffolding_project_flat.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-stonehearth:construction:scaffolding_project_complete | None | Empty | ✖
-##### stonehearth\components\scaffolding\scaffolding_project_volume.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-stonehearth:construction:scaffolding_project_complete | None | Empty | ✖
-##### stonehearth\components\scaffolding\scaffolding_region.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-stonehearth:construction:scaffolding_region_destroy_immediately |  self._sv._id | Empty | ✖
-stonehearth:construction:scaffolding_region_destroyed |  self._sv._id | Empty | ✖
-##### stonehearth\components\score\score_component.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-stonehearth:score_changed | key, new_score | Empty | ✔
-##### stonehearth\components\shepherd_pasture\shepherded_animal_component.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-stonehearth:shepherded_animal_follow_status_change | should_follow, shepherd | Empty | ✖
-##### stonehearth\components\shepherd_pasture\shepherd_pasture_component.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-stonehearth:on_pasture_animals_changed |  {} | Empty | ✖
-stonehearth:shepherd_pasture:feed_changed |  | Empty | ✔
-##### stonehearth\components\siege_weapon\siege_weapon_component.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-stonehearth:siege_weapon:ammo_status_changed | out_of_ammo | Empty | ✖
-stonehearth:siege_weapon:ammo_status_changed | out_of_ammo = true | Empty | ✖
-stonehearth:siege_weapon:needs_refill | None | Empty | ✖
-##### stonehearth\components\social\social_component.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-stonehearth:interaction:both_ready | None | Empty | ✔
-stonehearth:ending_interaction |  target | Empty | ✔
-##### stonehearth\components\stacks\stacks_component.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-radiant:item:stacks_changed |  entity | Empty | ✖
-##### stonehearth\components\stockpile\stockpile_component.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-stonehearth:stockpile:item_removed | stockpile, item | Empty | ✔
-stonehearth:stockpile:item_added | stockpile, item | Empty | ✔
-##### stonehearth\components\storage\storage_component.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-stonehearth:storage:filter_changed |  | Empty | ✔
-stonehearth:inventory:filter_changed | None | Empty | ✔
-stonehearth:storage:item_added | item, item_id | Empty | ✔
-stonehearth:storage:item_removed | item_id, item | Empty | ✔
-##### stonehearth\components\target_tables\target_table.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-stonehearth:target_table_changed |  | Empty | ✔
-##### stonehearth\components\trapping\bait_trap_component.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-stonehearth:trapped | None | Empty | ✔
-##### stonehearth\components\workshop\craft_order_list.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-stonehearth:order_list_changed | None | Empty | ✖
-##### stonehearth\components\work_order\work_order_component.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-stonehearth:work_order:status_changed | work_order_name, new_status | Empty | ✔
-##### stonehearth\data\buffs\hidden\nonthreatening\nonthreatening_buff.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-stonehearth:combat:nonthreatening_changed |  entity | Empty | ✔
-##### stonehearth\data\gm\campaigns\goblin_war\arcs\trigger\raidcamp\encounters\goblin_camp_departs.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-stonehearth:chieftain_camp_moving_on | None | Empty | ✖
-##### stonehearth\jobs\shepherd\shepherd.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-stonehearth:add_trailing_animal | animal, pasture | Empty | ✖
-##### stonehearth\services\client\build_editor\build_editor_service.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-stonehearth:sub_selection_changed | old_selection, new_selection, building | Empty | ✖
-stonehearth:building_selection_changed | None | Empty | ✖
-##### stonehearth\services\client\camera\player_camera_controller.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-stonehearth:camera:update | pan, orbit, zoom | Empty | ✔
-stonehearth:camera:update | pan, orbit, zoom | Empty | ✔
-stonehearth:camera:update | pan, orbit, zoom | Empty | ✔
-##### stonehearth\services\client\hilight\hilight_service.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-stonehearth:hilighted_changed | None | Empty | ✖
-##### stonehearth\services\client\renderer\renderer_service.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-stonehearth:ui_mode_changed | None | Empty | ✔
-stonehearth:building_vision_mode_changed | None | Empty | ✔
-##### stonehearth\services\client\selection\selection_service.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-stonehearth:selection_changed | None | Empty | ✖
-stonehearth:selection_changed | None | Empty | ✖
-stonehearth:selection_changed | None | Empty | ✖
-##### stonehearth\services\client\subterranean_view\subterranean_view_service.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-stonehearth:visible_volume_changed | None | Empty | ✔
-##### stonehearth\services\server\bulletin_board\bulletin_board_service.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-stonehearth:trigger_bulletin_for_test | bulletin, time | Empty | ✔
-##### stonehearth\services\server\combat\combat_service.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-stonehearth:combat:assault |  context | Empty | ✔
-stonehearth:combat:target_healed |  context | Empty | ✔
-stonehearth:population:engaged_in_combat | entity, entity_id | Empty | ✔
-stonehearth:combat:healed |  context | Empty | ✔
-stonehearth:combat:target_hit |  context | Empty | ✔
-stonehearth:combat:target_acquired | attacker, target | Empty | ✔
-stonehearth:combat:battery |  context | Empty | ✔
-stonehearth:combat:hit_stun |  context | Empty | ✔
-##### stonehearth\services\server\combat_server_commands\combat_server_commands_service.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-stonehearth:party_unit_command_completed | None | Empty | ✔
-##### stonehearth\services\server\game_creation\game_creation_service.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-stonehearth:journal_event | entity, description | Empty | ✔
-stonehearth:game_mode_changed | None | Empty | ✔
-##### stonehearth\services\server\game_master\controllers\encounters\city_tier_achieved_encounter.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-nfo.event_to_broadcas |  {} | Empty | ✖
-##### stonehearth\services\server\game_master\controllers\encounters\create_camp_encounter.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-stonehearth:create_camp_complete |  {} | Empty | ✔
-##### stonehearth\services\server\game_master\controllers\script_encounters\returning_trader_script.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-stonehearth:dynamic_scenario:finished | None | Empty | ✖
-##### stonehearth\services\server\game_master\controllers\script_encounters\simple_caravan_script.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-stonehearth:dynamic_scenario:finished | None | Empty | ✖
-##### stonehearth\services\server\hydrology\hydrology_service.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-stonehearth:hydrology:water_bodies_merged | None | Empty | ✔
-##### stonehearth\services\server\inventory\inventory.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-stonehearth:inventory:stockpile_removed |  stockpile | Empty | ✖
-stonehearth:inventory:item_removed |  item_id | Empty | ✖
-stonehearth:inventory:item_updated |  item | Empty | ✖
-stonehearth:inventory:public_storage_full_changed | None | Empty | ✔
-stonehearth:inventory:container_changed |  entity | Empty | ✔
-stonehearth:inventory:storage_added |  storage | Empty | ✖
-stonehearth:inventory:item_added |  item | Empty | ✖
-stonehearth:inventory:fullness_changed | None | Empty | ✔
-stonehearth:inventory:stockpile_added |  stockpile | Empty | ✖
-stonehearth:inventory:storage_removed |  storage_id | Empty | ✖
-##### stonehearth\services\server\inventory\inventory_tracker.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-stonehearth:inventory_tracker:item_removed |  key | Empty | ✔
-stonehearth:inventory_tracker:item_removed:sync | key, item_id | Empty | ✖
-stonehearth:inventory_tracker:item_added:sync | key, item | Empty | ✖
-stonehearth:inventory_tracker:item_added | key | Empty | ✔
-##### stonehearth\services\server\job\job_info_controller.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-stonehearth:job:job_presence_changed | is_combat_job | Empty | ✔
-##### stonehearth\services\server\player\player_service.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-stonehearth:amenity:sync_changed | faction_a, faction_b | Empty | ✖
-stonehearth:amenity_changed | other_player_a | Empty | ✔
-stonehearth:amenity_changed | other_player_b | Empty | ✔
-stonehearth:amenity_changed | None | Empty | ✔
-radiant:player_kingdom_changed | player_id | Empty | ✖
-##### stonehearth\services\server\population\population_faction.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-stonehearth:population:entity_destroyed | entity_id | Empty | ✔
-stonehearth:population:new_threat | entity_id, entity | Empty | ✔
-stonehearth:population:work_order_suspended | work_order_name, is_suspended, player_id | Empty | ✔
-##### stonehearth\services\server\population\population_service.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-stonehearth:entity:toggle_rescue | None | Empty | ✔
-##### stonehearth\services\server\shop\shop.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-stonehearth:item_sold | item_uri, item_cost, quantity | Empty | ✔
-stonehearth:item_bought | item_uri, item_cost, quantity | Empty | ✔
-##### stonehearth\services\server\tasks\task.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-self._activity.name .. ':work_available | None | Empty | ✔
-elf._stat |  self | Empty | ✔
-##### stonehearth\services\server\town\town.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-stonehearth:blueprint_added | town, blueprint | Empty | ✔
-stonehearth:town:medic_available | None | Empty | ✖
-stonehearth:town:medic_unavailable | None | Empty | ✖
-##### stonehearth\services\server\town_patrol\town_patrol_service.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-stonehearth:patrol_route_available |  player_id | Empty | ✔
-##### stonehearth\services\server\world_generation\world_generation_service.lua
-Event Name | Arguments | Triggered | Async
----------- | --------- | --------- | -----
-stonehearth:generate_world_progress | progress | Empty | ✖
+Arguments are read as follows -> `<name>: <type>`. While the type is just the variable which was assigned to the name.
+
+Object | Name | Arguments | Async | file
+------ | ---- | --------- | ----- | ----
+entity | ``stonehearth:admiring_fire``  |  | ✔ | stonehearth\ai\actions\admire_fire_adjacent_action.lua
+entity | ``stonehearth:tame_animal``  | animal: animal | ✔ | stonehearth\ai\actions\claim_animal_for_pasture.lua
+entity | ``stonehearth:eat_food``  | consumer: entity, time: stonehearth.calendar:get_time_and_date(), food_uri: food:get_uri(), food_data: self._food_data, food_name: food_name, food_quality: self:_get_quality(food) | ✔ | stonehearth\ai\actions\eat_item_action.lua
+stonehearth.personality | ``stonehearth:journal_event``  | entity: entity, description: self._food_data.journal_message | ✔ | stonehearth\ai\actions\eat_item_action.lua
+entity | ``stonehearth:feed_pasture``  | pasture: pasture | ✔ | stonehearth\ai\actions\feed_pasture_adjacent_action.lua
+entity | ``stonehearth:harvest_crop``  | crop_uri: self._crop:get_uri() | ✖ | stonehearth\ai\actions\harvest_crop_adjacent.lua
+entity | ``stonehearth:gather_renewable_resource``  | harvested_target: resource, spawned_item: spawned_item | ✔ | stonehearth\ai\actions\harvest_renewable_resource_adjacent.lua
+stonehearth.personality | ``stonehearth:journal_event``  | entity: entity, description: description | ✔ | stonehearth\ai\actions\harvest_resource_node_adjacent.lua
+entity | ``stonehearth:leave_animal_in_pasture``  | animal: args.animal | ✔ | stonehearth\ai\actions\leave_animal_in_pasture_action.lua
+entity | ``stonehearth:town_protection_completed``  | id: entity:get_id(), duration: patrol_duration | ✔ | stonehearth\ai\actions\log_patrol_time_action.lua
+ghost | ``stonehearth:item_placed_on_structure``  | ghost_id: ghost:get_id(), placed_item: self._root_entity, structure: options.structure | ✖ | stonehearth\ai\actions\place_carrying_on_structure_adjacent_action.lua
+entity | ``stonehearth:repaired_entity``  |  | ✔ | stonehearth\ai\actions\repair_entity_adjacent_action.lua
+healer | ``stonehearth:healer:healed_entity_in_combat``  | entity: target | ✔ | stonehearth\ai\actions\combat\execute_heal_action.lua
+args.target | ``stonehearth:combat:hit_stun``  | stun_always: args.stun_always | ✔ | stonehearth\ai\actions\combat\trigger_hit_stun_action.lua
+entity | ``stonehearth:start_conversation``  | entity: target, conversation_effects: conversation_effects, leader: Boolean | ✔ | stonehearth\ai\actions\conversation\trigger_conversation_action.lua
+target | ``stonehearth:start_conversation``  | entity: entity, conversation_effects: follower_conversation_effects | ✔ | stonehearth\ai\actions\conversation\trigger_conversation_action.lua
+entity | ``stonehearth:repaired_entity``  | entity: injured_entity | ✔ | stonehearth\ai\actions\health\heal_entity_adjacent_action.lua
+injured_entity | ``stonehearth:entity:healed``  | healer: entity | ✔ | stonehearth\ai\actions\health\heal_entity_adjacent_action.lua
+entity | ``stonehearth:mined_location``  | location: block | ✖ | stonehearth\ai\actions\mining\dig_adjacent_action.lua
+args.citizen | ``stonehearth:incapacitation:dropping``  | None | ✖ | stonehearth\ai\actions\rescue\drop_carried_citizen_action.lua
+entity | ``stonehearth:sleep_in_bed``  | bed: bed, is_owner: args.is_owner | ✔ | stonehearth\ai\actions\sleeping\sleep_in_bed_adjacent_action.lua
+entity | ``stonehearth:finished_sleeping``  | bed: bed, is_owner: args.is_owner | ✔ | stonehearth\ai\actions\sleeping\sleep_in_bed_adjacent_action.lua
+entity | ``stonehearth:sleep_on_ground``  | None | ✔ | stonehearth\ai\actions\sleeping\sleep_on_ground_action.lua
+entity | ``stonehearth:finished_sleeping``  | None | ✔ | stonehearth\ai\actions\sleeping\sleep_on_ground_action.lua
+entity | ``stonehearth:clear_trap``  | trapped_entity_id: trapped_entity_id | ✔ | stonehearth\ai\actions\trapping\check_bait_trap_adjacent_action.lua
+self._entity | ``stonehearth:befriend_pet``  | pet_id: pet_id | ✔ | stonehearth\ai\actions\trapping\check_bait_trap_adjacent_action.lua
+entity | ``stonehearth:town_protection_completed``  | id: entity:get_id(), duration: duration | ✔ | stonehearth\ai\actions\unit_control\unit_wait_at_location_action.lua
+self._sv._entity | ``stonehearth:malnourished_animal_event``  | None | ✔ | stonehearth\ai\observers\animal_calorie_observer.lua
+self._entity | ``stonehearth:malnourishment_event``  | None | ✔ | stonehearth\ai\observers\calorie_observer.lua
+item | ``stonehearth:item_undeployed``  | None | ✔ | stonehearth\call_handlers\place_item_call_handler.lua
+self._entity | ``stonehearth:ai:halt``  | None | ✖ | stonehearth\components\ai\ai_component.lua
+self._entity | ``stonehearth:attribute_changed:`` + <name> | name: name, entity: self._entity | ✔ | stonehearth\components\attributes\attributes_component.lua
+self._entity | ``stonehearth:construction:active_changed``  | None | ✖ | stonehearth\components\building\building_component.lua
+self._entity | ``stonehearth:construction:active_changed``  | None | ✖ | stonehearth\components\building\building_component.lua
+entity | ``stonehearth:construction:dependencies_finished_changed``  | None | ✖ | stonehearth\components\building\building_component.lua
+self._entity | ``stonehearth:carry_block:carrying_changed``  | None | ✔ | stonehearth\components\carry_block\carry_block_component.lua
+self._entity | ``stonehearth:carry_block:carrying_changed``  | None | ✔ | stonehearth\components\carry_block\carry_block_component.lua
+self._entity | ``stonehearth:combat:in_combat_changed``  | in_combat: curr_in_combat | ✖ | stonehearth\components\combat_state\combat_state_component.lua
+self._entity | ``stonehearth:combat:assaulting_changed``  | None | ✔ | stonehearth\components\combat_state\combat_state_component.lua
+self._entity | ``stonehearth:combat:primary_target_changed``  | None | ✔ | stonehearth\components\combat_state\combat_state_component.lua
+self._entity | ``stonehearth:combat:stance_changed``  | None | ✔ | stonehearth\components\combat_state\combat_state_component.lua
+self._entity | ``stonehearth:combat:panic_changed``  | None | ✔ | stonehearth\components\combat_state\combat_state_component.lua
+self._entity | ``stonehearth:combat_state:leash_changed``  | None | ✔ | stonehearth\components\combat_state\combat_state_component.lua
+self._entity | ``stonehearth:combat_state:leash_changed``  | None | ✔ | stonehearth\components\combat_state\combat_state_component.lua
+self._entity | ``stonehearth:combat_state:leash_changed``  | None | ✔ | stonehearth\components\combat_state\combat_state_component.lua
+self._entity | ``stonehearth:combat_state:leash_changed``  | None | ✔ | stonehearth\components\combat_state\combat_state_component.lua
+self._entity | ``stonehearth:construction:finished_changed``  | entity: self._entity | ✔ | stonehearth\components\construction_progress\construction_progress_component.lua
+self._entity | ``stonehearth:construction:teardown_changed``  | entity: self._entity | ✔ | stonehearth\components\construction_progress\construction_progress_component.lua
+self._entity | ``stonehearth:door:lock_changed``  | None | ✖ | stonehearth\components\door\door_component.lua
+self._entity | ``stonehearth:on_removed_from_world``  | None | ✖ | stonehearth\components\entity_forms\entity_forms_component.lua
+self._entity | ``stonehearth:on_added_to_world``  | None | ✖ | stonehearth\components\entity_forms\entity_forms_component.lua
+self._entity | ``stonehearth:equipment_changed``  | None | ✔ | stonehearth\components\equipment\equipment_component.lua
+self._entity | ``stonehearth:equipment_piece:equip_changed``  | None | ✖ | stonehearth\components\equipment_piece\equipment_piece_component.lua
+self._entity | ``stonehearth:equipment_piece:equip_changed``  | None | ✖ | stonehearth\components\equipment_piece\equipment_piece_component.lua
+self._entity | ``stonehearth:on_evolved``  | entity: self._entity, evolved_form: evolved_form | ✖ | stonehearth\components\evolve\evolve_component.lua
+self._entity | ``stonehearth:expendable_resource_changed:`` + <resource_name> | name: resource_name, entity: self._entity | ✔ | stonehearth\components\expendable_resources\expendable_resources_component.lua
+building | ``stonehearth:construction:scaffolding_project_complete``  | None | ✖ | stonehearth\components\fabricator\fabricator_component.lua
+stonehearth | ``stonehearth:fire:lit``  | lit: Boolean, player_id: radiant.entities.get_player_id(self._entity), entity: self._entity | ✔ | stonehearth\components\firepit\firepit_component.lua
+self._entity | ``stonehearth:happiness:thought_added``  | thought: thought_key | ✔ | stonehearth\components\happiness\happiness_component.lua
+self._entity | ``stonehearth:mood_changed``  | None | ✔ | stonehearth\components\happiness\happiness_component.lua
+self._entity | ``stonehearth:incapacitation:was_picked_up``  | None | ✖ | stonehearth\components\incapacitation\incapacitation_component.lua
+self._entity | ``stonehearth:incapacitation:was_dropped``  | None | ✖ | stonehearth\components\incapacitation\incapacitation_component.lua
+entity | ``stonehearth:entity:became_incapacitated``  | None | ✖ | stonehearth\components\incapacitation\incapacitation_component.lua
+entity | ``stonehearth:entity:incapacitate_state_changed``  | None | ✔ | stonehearth\components\incapacitation\incapacitation_component.lua
+entity | ``stonehearth:entity:incapacitate_state_changed``  | None | ✔ | stonehearth\components\incapacitation\incapacitation_component.lua
+entity | ``stonehearth:entity:incapacitate_state_changed``  | None | ✔ | stonehearth\components\incapacitation\incapacitation_component.lua
+stonehearth.personality | ``stonehearth:journal_event``  | entity: self._entity, description: activity_name | ✔ | stonehearth\components\job\job_component.lua
+self._entity | ``stonehearth:job_changed``  | entity: self._entity | ✖ | stonehearth\components\job\job_component.lua
+self._entity | ``stonehearth:level_up``  | level: new_level, job_uri: self._sv.job_uri, job_name: self._sv.curr_job_name | ✔ | stonehearth\components\job\job_component.lua
+self._entity | ``stonehearth:lease_released``  | lease_name: lease_name | ✔ | stonehearth\components\lease\lease_component.lua
+self._entity | ``stonehearth:mining:enable_changed``  | None | ✔ | stonehearth\components\mining_zone\mining_zone_component.lua
+self._entity | ``stonehearth:mount:owner_changed``  | None | ✔ | stonehearth\components\mount\mount_component.lua
+self._entity | ``stonehearth:mount:owner_changed``  | None | ✔ | stonehearth\components\mount\mount_component.lua
+self._entity | ``stonehearth:owner_changed``  | new_owner: self._sv.owner | ✔ | stonehearth\components\ownership\ownable_object_component.lua
+self._entity | ``stonehearth:party:size_changed``  | size: self._sv.party_size | ✔ | stonehearth\components\party\party_component.lua
+self._entity | ``stonehearth:party:size_changed``  | size: self._sv.party_size | ✔ | stonehearth\components\party\party_component.lua
+self._entity | ``stonehearth:party:party_changed``  | None | ✔ | stonehearth\components\party_member\party_member_component.lua
+self._entity | ``stonehearth:posture_changed``  | None | ✔ | stonehearth\components\posture\posture_component.lua
+self._entity | ``stonehearth:posture_changed``  | None | ✔ | stonehearth\components\posture\posture_component.lua
+self._entity | ``stonehearth:combat:projectile_impact``  | None | ✔ | stonehearth\components\projectile\projectile_component.lua
+self._entity | ``stonehearth:on_renewable_resource_renewed``  | target: self._entity, available_resource: self._resource | ✖ | stonehearth\components\renewable_resource_node\renewable_resource_node_component.lua
+self._entity | ``stonehearth:renewable_resource_spawned``  | target: self._entity, item: item | ✖ | stonehearth\components\renewable_resource_node\renewable_resource_node_component.lua
+self._entity | ``stonehearth:on_renewable_resource_renewed``  | target: self._entity, available_resource: json.resource | ✖ | stonehearth\components\renewable_resource_node\renewable_resource_node_component.lua
+owner | ``stonehearth:gather_resource``  | harvested_target: self._entity, spawned_item: item | ✖ | stonehearth\components\resource_node\resource_node_component.lua
+self | ``stonehearth:construction:scaffolding_project_complete``  | None | ✖ | stonehearth\components\scaffolding\scaffolding_project.lua
+self | ``stonehearth:construction:scaffolding_project_complete``  | None | ✖ | stonehearth\components\scaffolding\scaffolding_project_flat.lua
+self | ``stonehearth:construction:scaffolding_project_complete``  | None | ✖ | stonehearth\components\scaffolding\scaffolding_project_flat.lua
+self | ``stonehearth:construction:scaffolding_project_complete``  | None | ✖ | stonehearth\components\scaffolding\scaffolding_project_volume.lua
+self | ``stonehearth:construction:scaffolding_project_complete``  | None | ✖ | stonehearth\components\scaffolding\scaffolding_project_volume.lua
+self._sv.animal | ``stonehearth:shepherded_animal_follow_status_change``  | should_follow: self._sv.should_follow, shepherd: shepherd | ✖ | stonehearth\components\shepherd_pasture\shepherded_animal_component.lua
+self._entity | ``stonehearth:on_pasture_animals_changed``  |  | ✖ | stonehearth\components\shepherd_pasture\shepherd_pasture_component.lua
+self._entity | ``stonehearth:on_pasture_animals_changed``  |  | ✖ | stonehearth\components\shepherd_pasture\shepherd_pasture_component.lua
+self._entity | ``stonehearth:siege_weapon:needs_refill``  | None | ✖ | stonehearth\components\siege_weapon\siege_weapon_component.lua
+self._entity | ``stonehearth:siege_weapon:ammo_status_changed``  | out_of_ammo: Boolean | ✖ | stonehearth\components\siege_weapon\siege_weapon_component.lua
+self._entity | ``stonehearth:ending_interaction``  | target: requester | ✔ | stonehearth\components\social\social_component.lua
+self | ``stonehearth:interaction:both_ready``  | None | ✔ | stonehearth\components\social\social_component.lua
+radiant | ``radiant:item:stacks_changed``  | entity: self._entity | ✖ | stonehearth\components\stacks\stacks_component.lua
+self._entity | ``stonehearth:stockpile:item_added``  | stockpile: self._entity, item: item | ✔ | stonehearth\components\stockpile\stockpile_component.lua
+self._entity | ``stonehearth:stockpile:item_removed``  | stockpile: self._entity, item: item | ✔ | stonehearth\components\stockpile\stockpile_component.lua
+self._inventory | ``stonehearth:inventory:filter_changed``  | None | ✔ | stonehearth\components\storage\storage_component.lua
+entity | ``stonehearth:trapped``  | None | ✔ | stonehearth\components\trapping\bait_trap_component.lua
+self | ``stonehearth:order_list_changed``  | None | ✖ | stonehearth\components\workshop\craft_order_list.lua
+self._entity | ``stonehearth:work_order:status_changed``  | work_order_name: work_order_name, new_status: status | ✔ | stonehearth\components\work_order\work_order_component.lua
+stonehearth | ``stonehearth:combat:nonthreatening_changed``  | entity: entity | ✔ | stonehearth\data\buffs\hidden\nonthreatening\nonthreatening_buff.lua
+stonehearth | ``stonehearth:combat:nonthreatening_changed``  | entity: entity | ✔ | stonehearth\data\buffs\hidden\nonthreatening\nonthreatening_buff.lua
+boss | ``stonehearth:chieftain_camp_moving_on``  | None | ✖ | stonehearth\data\gm\campaigns\goblin_war\arcs\trigger\raidcamp\encounters\goblin_camp_departs.lua
+self._sv._entity | ``stonehearth:add_trailing_animal``  | animal: animal, pasture: pasture | ✖ | stonehearth\jobs\shepherd\shepherd.lua
+self | ``stonehearth:building_selection_changed``  | None | ✖ | stonehearth\services\client\build_editor\build_editor_service.lua
+self | ``stonehearth:sub_selection_changed``  | old_selection: old_selected, new_selection: selected, building: building_entity | ✖ | stonehearth\services\client\build_editor\build_editor_service.lua
+entity | ``stonehearth:hilighted_changed``  | None | ✖ | stonehearth\services\client\hilight\hilight_service.lua
+radiant | ``stonehearth:ui_mode_changed``  | None | ✔ | stonehearth\services\client\renderer\renderer_service.lua
+radiant | ``stonehearth:building_vision_mode_changed``  | None | ✔ | stonehearth\services\client\renderer\renderer_service.lua
+last_selected | ``stonehearth:selection_changed``  | None | ✖ | stonehearth\services\client\selection\selection_service.lua
+entity | ``stonehearth:selection_changed``  | None | ✖ | stonehearth\services\client\selection\selection_service.lua
+radiant | ``stonehearth:selection_changed``  | None | ✖ | stonehearth\services\client\selection\selection_service.lua
+self | ``stonehearth:visible_volume_changed``  | None | ✔ | stonehearth\services\client\subterranean_view\subterranean_view_service.lua
+stonehearth.bulletin_board | ``stonehearth:trigger_bulletin_for_test``  | bulletin: bulletin, time: stonehearth.calendar:get_time_and_date() | ✔ | stonehearth\services\server\bulletin_board\bulletin_board_service.lua
+party | ``stonehearth:combat:target_acquired``  | attacker: entity, target: target | ✔ | stonehearth\services\server\combat\combat_service.lua
+population | ``stonehearth:population:engaged_in_combat``  | entity: target, entity_id: target:get_id() | ✔ | stonehearth\services\server\combat\combat_service.lua
+data.party | ``stonehearth:party_unit_command_completed``  | None | ✔ | stonehearth\services\server\combat_server_commands\combat_server_commands_service.lua
+self | ``stonehearth:game_mode_changed``  | None | ✔ | stonehearth\services\server\game_creation\game_creation_service.lua
+info.event_to_broadcast | None |  | ✖ | stonehearth\services\server\game_master\controllers\encounters\city_tier_achieved_encounter.lua
+ctx.encounter_name | ``stonehearth:create_camp_complete``  |  | ✔ | stonehearth\services\server\game_master\controllers\encounters\create_camp_encounter.lua
+self | ``stonehearth:dynamic_scenario:finished``  | None | ✖ | stonehearth\services\server\game_master\controllers\script_encounters\returning_trader_script.lua
+self | ``stonehearth:dynamic_scenario:finished``  | None | ✖ | stonehearth\services\server\game_master\controllers\script_encounters\returning_trader_script.lua
+self | ``stonehearth:dynamic_scenario:finished``  | None | ✖ | stonehearth\services\server\game_master\controllers\script_encounters\simple_caravan_script.lua
+self | ``stonehearth:dynamic_scenario:finished``  | None | ✖ | stonehearth\services\server\game_master\controllers\script_encounters\simple_caravan_script.lua
+self | ``stonehearth:hydrology:water_bodies_merged``  | None | ✔ | stonehearth\services\server\hydrology\hydrology_service.lua
+self | ``stonehearth:inventory:storage_added``  | storage: storage | ✖ | stonehearth\services\server\inventory\inventory.lua
+self | ``stonehearth:inventory:storage_removed``  | storage_id: id | ✖ | stonehearth\services\server\inventory\inventory.lua
+self | ``stonehearth:inventory:public_storage_full_changed``  | None | ✔ | stonehearth\services\server\inventory\inventory.lua
+self | ``stonehearth:inventory:stockpile_added``  | stockpile: stockpile | ✖ | stonehearth\services\server\inventory\inventory.lua
+self | ``stonehearth:inventory:stockpile_removed``  | stockpile: stockpile | ✖ | stonehearth\services\server\inventory\inventory.lua
+self | ``stonehearth:inventory:item_updated``  | item: item | ✖ | stonehearth\services\server\inventory\inventory.lua
+radiant | ``stonehearth:inventory:container_changed``  | entity: item | ✔ | stonehearth\services\server\inventory\inventory.lua
+self | ``stonehearth:inventory:item_added``  | item: item | ✖ | stonehearth\services\server\inventory\inventory.lua
+self | ``stonehearth:inventory:item_removed``  | item_id: item_id | ✖ | stonehearth\services\server\inventory\inventory.lua
+radiant | ``stonehearth:inventory:container_changed``  | entity: item | ✔ | stonehearth\services\server\inventory\inventory.lua
+self | ``stonehearth:inventory:fullness_changed``  | None | ✔ | stonehearth\services\server\inventory\inventory.lua
+self | ``stonehearth:inventory_tracker:item_added:sync``  | key: key, item: entity | ✖ | stonehearth\services\server\inventory\inventory_tracker.lua
+self | ``stonehearth:inventory_tracker:item_added``  | key: key | ✔ | stonehearth\services\server\inventory\inventory_tracker.lua
+self | ``stonehearth:inventory_tracker:item_removed:sync``  | key: key, item_id: entity_id | ✖ | stonehearth\services\server\inventory\inventory_tracker.lua
+self | ``stonehearth:inventory_tracker:item_removed``  | key: key | ✔ | stonehearth\services\server\inventory\inventory_tracker.lua
+stonehearth.job:get_jobs_controller(self._sv.player_id) | ``stonehearth:job:job_presence_changed``  | is_combat_job: self:is_combat_job() | ✔ | stonehearth\services\server\job\job_info_controller.lua
+stonehearth.job:get_jobs_controller(self._sv.player_id) | ``stonehearth:job:job_presence_changed``  | is_combat_job: self:is_combat_job() | ✔ | stonehearth\services\server\job\job_info_controller.lua
+_radiant | ``radiant:player_kingdom_changed``  | player_id: player_id | ✖ | stonehearth\services\server\player\player_service.lua
+pop | ``stonehearth:amenity_changed``  | other_player: player_b | ✔ | stonehearth\services\server\player\player_service.lua
+pop | ``stonehearth:amenity_changed``  | other_player: player_a | ✔ | stonehearth\services\server\player\player_service.lua
+radiant | ``stonehearth:amenity:sync_changed``  | faction_a: player_a, faction_b: player_b | ✖ | stonehearth\services\server\player\player_service.lua
+pop | ``stonehearth:amenity_changed``  | None | ✔ | stonehearth\services\server\player\player_service.lua
+stonehearth.population | ``stonehearth:population:entity_destroyed``  | entity_id: entity_id | ✔ | stonehearth\services\server\population\population_faction.lua
+stonehearth | ``stonehearth:population:work_order_suspended``  | work_order_name: work_order, is_suspended: is_suspended, player_id: self._sv.player_id | ✔ | stonehearth\services\server\population\population_faction.lua
+entity | ``stonehearth:entity:toggle_rescue``  | None | ✔ | stonehearth\services\server\population\population_service.lua
+self | ``stonehearth:item_bought``  | item_uri: uri, item_cost: item_cost, quantity: buy_quantity | ✔ | stonehearth\services\server\shop\shop.lua
+self | ``stonehearth:town:medic_available``  | None | ✖ | stonehearth\services\server\town\town.lua
+requester | ``stonehearth:town:medic_unavailable``  | None | ✖ | stonehearth\services\server\town\town.lua
+self | ``stonehearth:town:medic_available``  | None | ✖ | stonehearth\services\server\town\town.lua
+self | ``stonehearth:patrol_route_available``  | player_id: player_id | ✔ | stonehearth\services\server\town_patrol\town_patrol_service.lua
+###### A total of **158** events found while parsing **796** files.

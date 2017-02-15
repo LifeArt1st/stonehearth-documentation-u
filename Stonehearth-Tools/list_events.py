@@ -1,17 +1,17 @@
-from pyparsing import Word, alphas, Optional, Combine, ZeroOrMore, Group, quotedString, delimitedList, Suppress, alphanums, ParseResults
+from pyparsing import Word, alphas, Optional, Combine, ZeroOrMore, Group, quotedString, delimitedList, Suppress, alphanums, ParseResults, removeQuotes
 
 import io
 import os
 from pathlib import PurePath
 
-encoding = "utf-8"
+CONSOLE_OUTPUT = True
 
+encoding = "utf-8"
 types = {"true": "Boolean", "false": "Boolean"}
 
 def convertType(s, l, t):
     if t[0] in types:
         return types[t[0]]
-
 
 def parse_events_from_text(text):
     variable = Word(alphanums + "-_.:()")
@@ -57,10 +57,11 @@ def make_string_from_events(events):
     events_string = []
     for event in events:
         object_ = event["object"]
-        name_str = event.get("name")[0].replace("'", "`") if event.get("name") != None else None
+        name_str = event.get("name")
         if name_str != None:
+            name_str = event.get("name")[0].translate(str.maketrans({"'":"`", '"':"`"}))
             name_var = "+ <{0}>".format(event.get("name")[1]) if len(event.get("name")) > 1 else ""
-        name = name_str + name_var if event.get("name") != None else None
+        name = "`{0}` {1}".format(name_str, name_var) if event.get("name") != None else None
         params = event.get("parameters")
         if params != None:
             params = make_string_from_params(params) 
@@ -99,8 +100,8 @@ def _get_lua_file_count(root):
 def parse_events_from_files(root, outputfile):
     with io.open(outputfile, "w", encoding = encoding) as fo:
         # found something
-        print("## " + root + "Events", file = fo)
-        print("*I can't promise that these are all events*\n", file = fo)
+        print("## " + root + " - events", file = fo)
+        print("*I can't promise that these are all events.*\n", file = fo)
         print("Arguments are read as follows -> `<name>: <type>`. While the type is just the variable which was assigned to the name.\n", file = fo)
         print("Object | Name | Arguments | Async | file", file = fo)
         print("------ | ---- | --------- | ----- | ----", file = fo)
@@ -124,9 +125,9 @@ def parse_events_from_files(root, outputfile):
                                 eventCount += 1
                                 print(event + " | " + str(file), file = fo)
                         consoleString = "searching... [{0}/{1}] -> {2}".format(openedFiles, filesToParse, eventCount)
-                        print(consoleString, end="\r", flush = True)
+                        if CONSOLE_OUTPUT: print(consoleString, end="\r", flush = True)
         print("###### A total of **{0}** events found while parsing **{1}** files.".format(eventCount, openedFiles), file = fo)
-        print("\nDone!")
+        if CONSOLE_OUTPUT: print("\nDone!")
 
 if __name__ == "__main__":
     parse_events_from_files("./stonehearth/", "stonehearth_events.markdown")

@@ -1,1 +1,19 @@
-# First Page
+- Introduction
+    - install a mod
+    - smod extension
+- Architecture
+    - Entity Component System (short how does it work, whats the benefit)
+    - how is that applied to stonehearth (short)
+- First Steps
+    - creating your first entity (should be a continuous mod which will get expanded - but simple)
+    - adding a controller and server init
+        - how is a controller called etc.
+    - your first component
+- Events
+    - overview
+    - examples
+    - list of events
+- Ai
+    - overview
+    - examples
+- FAQ

@@ -148,8 +148,8 @@ self | ``stonehearth:inventory_tracker:item_added:sync``  | key: key, item: enti
 self | ``stonehearth:inventory_tracker:item_added``  | key: key | ✔ | stonehearth\services\server\inventory\inventory_tracker.lua
 self | ``stonehearth:inventory_tracker:item_removed:sync``  | key: key, item_id: entity_id | ✖ | stonehearth\services\server\inventory\inventory_tracker.lua
 self | ``stonehearth:inventory_tracker:item_removed``  | key: key | ✔ | stonehearth\services\server\inventory\inventory_tracker.lua
-stonehearth.job:get_jobs_controller(self._sv.player_id) | ``stonehearth:job:job_presence_changed``  | is_combat_job: self:is_combat_job() | ✔ | stonehearth\services\server\job\job_info_controller.lua
-stonehearth.job:get_jobs_controller(self._sv.player_id) | ``stonehearth:job:job_presence_changed``  | is_combat_job: self:is_combat_job() | ✔ | stonehearth\services\server\job\job_info_controller.lua
+get_jobs_controller(player_id) | ``stonehearth:job:job_presence_changed``  | is_combat_job: self:is_combat_job() | ✔ | stonehearth\services\server\job\job_info_controller.lua
+get_jobs_controller(player_id) | ``stonehearth:job:job_presence_changed``  | is_combat_job: self:is_combat_job() | ✔ | stonehearth\services\server\job\job_info_controller.lua
 _radiant | ``radiant:player_kingdom_changed``  | player_id: player_id | ✖ | stonehearth\services\server\player\player_service.lua
 pop | ``stonehearth:amenity_changed``  | other_player: player_b | ✔ | stonehearth\services\server\player\player_service.lua
 pop | ``stonehearth:amenity_changed``  | other_player: player_a | ✔ | stonehearth\services\server\player\player_service.lua
